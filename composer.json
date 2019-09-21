@@ -1,6 +1,9 @@
 {
     "name": "eyowo/eyowo-php",
     "description": "PHP Package to access the Eyowo Payment Service",
+    "keywords": [
+        "eyowo", "developer", "wrapper", "client", "api"
+    ],
     "type": "library",
     "license": "mit",
     "minimum-stability": "dev",
