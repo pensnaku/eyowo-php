@@ -1,14 +1,24 @@
 <?php
 
-namespace EyowoPHP\Validator;
+namespace EyowoPHP\Validation;
 
 use EyowoPHP\Exception\EyowoPHPException;
+use EyowoPHP\Constants;
 
 class Validator
 {
-    const _MOBILE_PREFIX = '234';
-    public static function validateMobile($mobile, $prefix = self::_MOBILE_PREFIX)
+    /**
+     * @param $mobile
+     * @param string $prefix
+     * @return bool
+     */
+    public static function validateMobile($mobile, $prefix = Constants\_MOBILE_PREFIX)
     {
-        throw new EyowoPHPException();
+        return true;
+    }
+
+    public function validateEmail($email)
+    {
+        return true;
     }
 }

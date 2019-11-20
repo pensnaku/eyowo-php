@@ -2,14 +2,21 @@
 
 namespace EyowoPHP\Tests\Unit;
 
+use EyowoPHP\Validation\Validator;
 use PHPUnit\Framework\TestCase;
-use EyowoPHP\Validator\Validator;
+
 
 class ValidatorTest extends TestCase
 {
     public function testValidateMobile()
     {
-        $result = Validator::validateMobile('2348066080762');
-        $this->assertEquals(false, $result);
+        $this->assertEquals(true, Validator::validateMobile('2348066080762'));
+        $this->assertEquals(true, Validator::validateMobile('08066080762'));
+
+        $this->assertEquals(false, Validator::validateMobile(''));
+    }
+
+    public function testValidateEmail() {
+        $this->assertEquals(true, Validator::validateEmail('test@email.com'));
     }
 }
